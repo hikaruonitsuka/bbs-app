@@ -1,6 +1,5 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Inner from "./components/Inner";
 import ThreadList from "./components/ThreadList";
 
 function App() {
@@ -8,9 +7,7 @@ function App() {
     <>
       <Header />
       <main className="my-8">
-        <Inner>
-          <ThreadList />
-        </Inner>
+        <ThreadList />
       </main>
       <Footer />
     </>
