@@ -37,5 +37,10 @@
   },
   "volta": {
     "node": "20.11.1"
+  },
+  "devDependencies": {
+    "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.12",
+    "tailwindcss": "^3.4.1"
   }
 }
