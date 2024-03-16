@@ -1,8 +1,52 @@
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Inner from "./components/Inner";
+
 function App() {
   return (
-    <div>
-      <header className="m-4 p-4 text-3xl font-extrabold">ヘッダー</header>
-    </div>
+    <>
+      <Header />
+      <main>
+        <Inner>
+          <section>
+            <h2>新着スレッド</h2>
+            <ul>
+              <li>
+                <a href="/">
+                  <p>推しについて語るスレ</p>
+                </a>
+              </li>
+              <li>
+                <a href="/">
+                  <p>推しについて語るスレ</p>
+                </a>
+              </li>
+              <li>
+                <a href="/">
+                  <p>推しについて語るスレ</p>
+                </a>
+              </li>
+              <li>
+                <a href="/">
+                  <p>推しについて語るスレ</p>
+                </a>
+              </li>
+              <li>
+                <a href="/">
+                  <p>推しについて語るスレ</p>
+                </a>
+              </li>
+              <li>
+                <a href="/">
+                  <p>推しについて語るスレ</p>
+                </a>
+              </li>
+            </ul>
+          </section>
+        </Inner>
+      </main>
+      <Footer />
+    </>
   );
 }
 
