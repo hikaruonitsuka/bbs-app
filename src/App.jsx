@@ -1,48 +1,15 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Inner from "./components/Inner";
+import ThreadList from "./components/ThreadList";
 
 function App() {
   return (
     <>
       <Header />
-      <main>
+      <main className="my-8">
         <Inner>
-          <section>
-            <h2>新着スレッド</h2>
-            <ul>
-              <li>
-                <a href="/">
-                  <p>推しについて語るスレ</p>
-                </a>
-              </li>
-              <li>
-                <a href="/">
-                  <p>推しについて語るスレ</p>
-                </a>
-              </li>
-              <li>
-                <a href="/">
-                  <p>推しについて語るスレ</p>
-                </a>
-              </li>
-              <li>
-                <a href="/">
-                  <p>推しについて語るスレ</p>
-                </a>
-              </li>
-              <li>
-                <a href="/">
-                  <p>推しについて語るスレ</p>
-                </a>
-              </li>
-              <li>
-                <a href="/">
-                  <p>推しについて語るスレ</p>
-                </a>
-              </li>
-            </ul>
-          </section>
+          <ThreadList />
         </Inner>
       </main>
       <Footer />
