@@ -1,22 +1,11 @@
-import useSWRInfinite from "swr/infinite";
 import Inner from "./Inner";
 import Error from "./Error";
 import Loading from "./Loading";
-import { fetcher } from "../utils/fetcher";
-
-const getOffset = (pageOffset, previousPageData) => {
-  if (previousPageData && !previousPageData.length) return null;
-  return `/threads?offset=${pageOffset * 10 + 1}`;
-};
+import Heading from "./Heading";
+import { useFetchThreadList } from "../hooks/useFetchThreadList";
 
 const ThreadList = () => {
-  const { data, error, isLoading, size, setSize } = useSWRInfinite(
-    getOffset,
-    fetcher,
-    {
-      initialSize: 1,
-    },
-  );
+  const { data, error, isLoading, size, setSize } = useFetchThreadList();
 
   if (error) {
     return <Error error={error} />;
@@ -43,9 +32,7 @@ const ThreadList = () => {
     <Inner>
       <div className="flex flex-col gap-y-10">
         <section className="flex flex-col gap-y-8">
-          <h2 className="text-center text-3xl font-bold text-cyan-900">
-            新着スレッド
-          </h2>
+          <Heading>新着スレッド</Heading>
           <ul className="flex flex-col gap-y-4">
             {threadList.map((thread) => (
               <li key={thread.id}>
@@ -59,10 +46,7 @@ const ThreadList = () => {
             ))}
           </ul>
           <div className="flex justify-center ">
-            <button
-              className="hover rounded-lg bg-cyan-900 px-4 py-2 font-bold text-white"
-              onClick={() => setSize(size + 1)}
-            >
+            <button className="button" onClick={() => setSize(size + 1)}>
               次のスレッドを読み込む
             </button>
           </div>
