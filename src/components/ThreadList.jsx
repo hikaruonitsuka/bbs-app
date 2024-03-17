@@ -37,7 +37,7 @@ const ThreadList = () => {
             {threadList.map((thread) => (
               <li key={thread.id}>
                 <a
-                  href={`/${thread.id}}`}
+                  href={`/threads/${thread.id}}`}
                   className="hover block rounded-lg bg-slate-100 p-4 font-bold"
                 >
                   {thread.title}
