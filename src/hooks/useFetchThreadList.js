@@ -3,7 +3,7 @@ import { fetcher } from "../utils/fetcher";
 
 export const getOffset = (pageOffset, previousPageData) => {
   if (previousPageData && !previousPageData.length) return null;
-  return `/threads?offset=${pageOffset * 10 + 1}`;
+  return `/threads?offset=${pageOffset * 10}`;
 };
 
 export const useFetchThreadList = () => {
