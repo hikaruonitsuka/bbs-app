@@ -12,3 +12,7 @@
 .hover {
   @apply transition-opacity hover:opacity-60;
 }
+
+.button {
+  @apply hover rounded-lg bg-cyan-900 px-4 py-2 font-bold text-white;
+}
