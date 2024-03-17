@@ -6,9 +6,13 @@ const Header = () => {
       <Inner>
         <div className="align-center flex justify-between">
           <h1>
-            <a href="/">掲示板</a>
+            <a href="/" className="hover">
+              掲示板
+            </a>
           </h1>
-          <a href="/">スレッドを立てる</a>
+          <a href="/" className="hover">
+            スレッドを立てる
+          </a>
         </div>
       </Inner>
     </header>
