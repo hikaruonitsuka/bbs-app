@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Inner from "./Inner";
 
 const Header = () => {
@@ -10,9 +11,9 @@ const Header = () => {
               掲示板
             </a>
           </h1>
-          <a href="/" className="hover">
+          <Link to="/thread/new" className="hover">
             スレッドを立てる
-          </a>
+          </Link>
         </div>
       </Inner>
     </header>
