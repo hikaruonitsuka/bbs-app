@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Inner from "./Inner";
 import Error from "./Error";
 import Loading from "./Loading";
@@ -36,12 +37,12 @@ const ThreadList = () => {
           <ul className="flex flex-col gap-y-4">
             {threadList.map((thread) => (
               <li key={thread.id}>
-                <a
-                  href={`/threads/${thread.id}}`}
+                <Link
+                  to={`/threads/${thread.id}`}
                   className="hover block rounded-lg bg-slate-100 p-4 font-bold"
                 >
                   {thread.title}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
