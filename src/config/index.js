@@ -1,1 +1,1 @@
-export const BASE_API_URL = "https://railway.bulletinboard.techtrain.dev";
+export const BASE_API_URL = process.env.REACT_APP_BASE_API_URL;
