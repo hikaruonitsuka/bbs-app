@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import Inner from "./Inner";
-import Error from "./Error";
-import Loading from "./Loading";
-import Heading from "./Heading";
-import { useFetchThreadList } from "../hooks/useFetchThreadList";
+import Inner from "../common/Inner";
+import Error from "../common/Error";
+import Loading from "../common/Loading";
+import Heading from "../common/Heading";
+import { useFetchThreadList } from "../../hooks/useFetchThreadList";
 
 const ThreadList = () => {
   const { data, error, isLoading, size, setSize } = useFetchThreadList();
@@ -39,6 +39,7 @@ const ThreadList = () => {
               <li key={thread.id}>
                 <Link
                   to={`/threads/${thread.id}`}
+                  state={{ title: thread.title }}
                   className="hover block rounded-lg bg-slate-100 p-4 font-bold"
                 >
                   {thread.title}

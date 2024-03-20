@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import Heading from "./Heading";
-import Inner from "./Inner";
-import { BASE_API_URL } from "../config";
+import Heading from "../common/Heading";
+import Inner from "../common/Inner";
+import { BASE_API_URL } from "../../config";
 
 const CreateThread = () => {
   const [title, setTitle] = useState("");
